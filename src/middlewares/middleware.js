@@ -1,6 +1,6 @@
 exports.mddCheckCSRF = (err, req, res, next) => {
     if (err && err.code === 'EBADCSRFTOKEN') {
-        return res.render('404');
+        return res.render('error');
     }
 };
 
