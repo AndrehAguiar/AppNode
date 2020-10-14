@@ -1,14 +1,10 @@
-<!--<#%- include('includes/head') %>-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Express</title>
-</head>
+<%- include('includes/head'); %>
 
 <body>
+    <%- include('includes/menu'); %>
     <section class="container">
         <h1><%= titulo %></h1>
         <article class="content">
@@ -16,8 +12,7 @@
             <%= content %>
         </article>
     </section>
-    <script src="./assets/js/bundle.js"></script>
+    <%- include('includes/footer'); %>
 </body>
 
 </html>
-<!--<#%- include('include/footer') %>-->
