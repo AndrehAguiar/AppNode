@@ -16,7 +16,7 @@ const app = express();
 
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
-const msgFlash = require('connect-flash');
+const flash = require('connect-flash');
 
 const optSession = session({
     secret: 'QualuerSecret',
@@ -43,7 +43,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(optSession);
-app.use(msgFlash());
+app.use(flash());
 app.use(csrf());
 app.use(mddCSRF);
 app.use(mddCheckCSRF);
